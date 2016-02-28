@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="3a71bc8f-e670-4a96-a823-22118833725d" Version="1.0" Language="en-US" Publisher="Raydude" />
+    <DisplayName>VSFileSync</DisplayName>
+    <Description>
+      This tool is designed to keep your local copy of a solution/projects syncronized with a remote copy of that solution. This is not a Source Control process, but rather a real time cloning of changes between two locations.
+
+      The specific need that drove the creation of this tool is that our Solution working directories are on a shared network drive that is both archived regularly and accessible by all developers. With the now common use of SSD drives, it is much faster to develop locally on the SSD, but the need to keep files accessible and archived remains. This tool is intended to keep all file changes made locally copied to the remote storage to facilitate that need.
+    </Description>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />
+    <InstallationTarget Version="[11.0,12.0)" Id="Microsoft.VisualStudio.Ultimate" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.5" />
+    <Dependency Id="Microsoft.VisualStudio.MPF.11.0" DisplayName="Visual Studio MPF 11.0" d:Source="Installed" Version="11.0" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+  </Assets>
+</PackageManifest>
